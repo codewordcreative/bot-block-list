@@ -16,8 +16,9 @@ All crawled content has an immediate impact: data transfer.
   - Any platform looking for Open Graph or similar information when a link is shared on their platform
   - Other legitimate purposes, e.g. tools ensuring proper website function
 
-#### Example bots that others may flag which I allow
+#### Example bots that others may flag which I allow or otherwise do not list
   - qualifiedbot is not blocked, as it is designed to only ever be used with the webmaster's consent - it is a paid-for service.
+  - anything with "spider" or something similar, shorter in the name - it will be blocked by the general rule.
 
 #### Data collection and processing  
 Automated data collection at scale is sometimes helpful, but often not.
