@@ -1,0 +1,61 @@
+# Example robots.txt file. You can check out mine in practice, and the latest rules I am using right here: https://codewordcreative.com/robots.txt
+
+# Include your sitemap at the top and ensure it works to give search engines a hand finding your content.
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# You can include a disclaimer in your robots.txt, like this perhaps. I am not sure what good it actually does, but it can't hurt.
+
+## This website was designed for humans, not for scrapers. Using any device, tool, or 
+## process to automatically mine or scrape data is prohibited without prior written 
+## permission from the owner of this website.
+## 
+## Prohibited uses include but are not limited to:
+## (1) Text and data mining activities under Art. 4 of the EU Directive on Copyright in
+##     the Digital Single Market;
+## (2) The development of any software, machine learning, artificial intelligence (AI),
+##     and/or large language models (LLMs);
+## (3) Creating or providing archived or cached data sets containing our content to others;
+## (4) Any commercial purposes.
+
+# This is the bot-related block list. Some of these are additionally blocked by my htaccess rules, but this will hopefully stop them trying again. It is also the only way to properly block some. Check out the robots.txt of major news networks for inspiration.
+# Some sources say it is okay to put all the agents in a long list and then just one disallow at the end. It's risky - it's reliant on the bot reading it properly. Probably best to do it this way.
+# The little "important" folder block at the end is the beginning of a "black hole" trick: If using something like Wordfence or another firewall script or tool, you can automatically ban any IP address that tries to access it and log the user agent.
+# It's kinda like saying "This is where I store my goodies", then trapping them when they try to break in.
+  
+User-agent: facebookexternalhit
+Allow: /*?*smid=
+User-agent: Twitterbot
+Disallow:
+# Blocking AI and scraping bots ---
+User-agent: Amazonbot
+Disallow: /
+User-agent: Applebot-Extended
+Disallow: /
+User-agent: Applebot
+Disallow: /
+User-agent: Bytespider
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: Claude-Web
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+User-agent: FacebookBot
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: GPTBot
+Disallow: /
+User-agent: meta-externalagent
+Disallow: /
+User-agent: Meta-ExternalFetcher
+Disallow: /
+User-agent: OAI-SearchBot
+Disallow: /
+User-agent: PerplexityBot
+Disallow: /
+User-agent: *
+Disallow: /important/
