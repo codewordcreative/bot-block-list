@@ -49,15 +49,15 @@ Assuming you are on an Apache server (e.g., WordPress and many other setups will
 First off, I used my own server logs and a special script to track user agents. This is how I found the suspicious, outdated user agents and many of the bots listed. After I'd been using that for a while, enhancing it with various useful sources, I discovered 8G Firewall. That team - Perishable Press - has been doing very similar things in a very similar way, but with some additional general rules thrown in, so...
 
 ### Special mention: Perishable Press and 8G Firewall
-I integrated some of the ideas and a couple of agents I had missed, but larger or more commonly hit sites may want to integrate more. Just check it out:
-[Perishable Press Ultimate Block list](https://perishablepress.com/ultimate-ai-block-list/)
-* Please note: The suggested robots.txt may not process properly, and is, to be honest, pointless, because most bots on it will ignore robots.txt. 
-* Their list may diverge from mine. I haven't checked so recently. I did notice one or two "only when requested" AI crawlers are on there, such as QualifiedBot.
-* If you see things missing from mine, let me know. If you see things missing from theirs, they probably would appreciate the hint, too!
-[The full 8G firewall is worth checking out](https://perishablepress.com/8g-firewall/)
-* I don't use the lot, but it's an excellent basis for great .htaccess security.
-[Check out their paid plugins](https://plugin-planet.com/)
-* I don't use them, but it feels more than fair to link to them given how much they are doing for free.
+I integrated some of the ideas and a couple of agents I had missed, but larger or more commonly hit sites may want to integrate more. 
+* Just check it out: [Perishable Press Ultimate Block list](https://perishablepress.com/ultimate-ai-block-list/)
+  - Please note: The suggested robots.txt may not process properly, and is, to be honest, pointless, because most bots on it will ignore robots.txt. 
+  - Their list may diverge from mine. I haven't checked so recently. I did notice one or two "only when requested" AI crawlers are on there, such as QualifiedBot.
+  - If you see things missing from mine, let me know. If you see things missing from theirs, they probably would appreciate the hint, too!
+* [The full 8G firewall is worth checking out](https://perishablepress.com/8g-firewall/)
+  - I don't use the lot, but it's an excellent basis for great .htaccess security.
+* [Check out their paid plugins](https://plugin-planet.com/)
+  - I don't use them, but it feels more than fair to link to them given how much they are doing for free.
 
 ### Bot lists
 These can provide a great starting point, though I should emphasise that I tend to check out each bot manually, and try to take at least some sort of look at some bots in other categories. For example, some SEO tools may also be used to crawl and train LLMs to generate content, while some miscellaneous or unclassified bots may actually be not so hard to identify as sufficiently suspicious.
