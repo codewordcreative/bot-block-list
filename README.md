@@ -45,11 +45,52 @@ Data storage and processing for LLMs and its later referencing to create content
 ## How to block?
 Assuming you are on an Apache server (e.g., WordPress and many other setups will usually be using Apache), adapt my rules as per your preferences (anything starting with a # is a comment and can be deleted!) and put them in your .htaccess file, near the top.
 
+## Good sources used to create and update this
+First off, I used my own server logs and a special script to track user agents. This is how I found the suspicious, outdated user agents and many of the bots listed. After I'd been using that for a while, enhancing it with various useful sources, I discovered 8G Firewall. That team - Perishable Press - has been doing very similar things in a very similar way, but with some additional general rules thrown in, so...
+
+### Special mention: Perisahable Press and 8G Firewall
+I integrated some of the ideas and a couple of agents I had missed, but larger or more commonly hit sites may want to integrate more. Just check it out:
+[Perishable Press Ultimate Block list](https://perishablepress.com/ultimate-ai-block-list/)
+* Please note: The suggested robots.txt may not process properly, and is, to be honest, pointless, because most bots on it will ignore robots.txt. 
+* Their list may diverge from mine. I haven't checked so recently. I did notice one or two "only when requested" AI crawlers are on there, such as QualifiedBot.
+* If you see things missing from mine, let me know. If you see things missing from theirs, they probably would appreciate the hint, too!
+[The full 8G firewall is worth checking out](https://perishablepress.com/8g-firewall/)
+* I don't use the lot, but it's an excellent basis for great .htaccess security.
+[Check out their paid plugins](https://plugin-planet.com/)
+* I don't use them, but it feels more than fair to link to them given how much they are doing for free.
+
+### Bot lists
+These can provide a great starting point, though I should emphasise that I tend to check out each bot manually, and try to take at least some sort of look at some bots in other categories. For example, some SEO tools may also be used to crawl and train LLMs to generate content, while some miscellaneous or unclassified bots may actually be not so hard to identify as sufficiently suspicious.
+* [Cloudflare's policy and links to the directory](https://developers.cloudflare.com/bots/concepts/bot/#ai-bots)
+* [Dark Visitors has a great directory and robots.txt tool](https://darkvisitors.com/)
+  - It has a tool for daily updates to the robots.txt.
+  - Robots.txt by itself isn't very useful, but it's possible the paid version goes further - I think it uses an API lookup system (not THAT efficient), but I may be wrong.
+  - It also has some monitoring tools that make it easier for less nerdy types to see what is happening.
+* [Data Dome is a security company sharing useful intel](https://datadome.co/datadome-intel/)
+* Many more sources can be added here!
+
 ## What about Robots.txt?
-A small number of AI agencies will observe robots.txt, but many don't. Robots.txt is still necessary as it is the only way to block Google's AI training without touching your ability to rank in Google Search or AI summaries (yep, appearing in Google's AI summaries doesn't require you to let yourself get scraped to train Gemini).
+A small number of AI agencies will observe robots.txt, but many don't. Robots.txt is still necessary as it is the only way to block Google's AI training without touching your ability to rank in Google Search or AI summaries (yep, appearing in Google's AI summaries doesn't require you to let yourself get scraped to train Gemini). I'm including my robots.txt, but please understand it is not very effective.
+* Think of robots.txt as saying "Please don't attend this house party", but they can crash it anyway, with no extra effort.
+* Think of .htaccess or other rules using user agent IDs as putting a bouncer on the door to check IDs:
+  - Fake IDs are broadly available, but:
+    * Script kiddies often just borrow that same person's ID, so they are easy to block.
+    * A lot of people just forget to update their ID, or bring one to the club.
+    * Anyone from a larger company generally obeys company policy of using the same ID every time.
+Other systems exist, but they use a lot more energy to run, can slow performance, and hurt user experience.
 
+## Not sure why I blocked this particular text string or bot?
+First, try googling it. See if the results on there give you an answer. Still not sure? Reach out to me. I can look into it. Let me know if something needs fixing!
 
-## Differences to Cloudflare
+## Differences to Cloudflare or other tools
 ### The block list
-Cloudflare's list does not go anything like as far. They have also marked some bots as verified, therefore not blocked, despite them being known to crawl for AI training purposes
+Cloudflare's list does not go anything like as far. They also block some verified AI crawler bots that only run on customer sites, such as QualifiedBot. They do not block a lot of major scrapers and AI crawlers.
 
+### The bot challenge tools, e.g. Cloudflare or Anubis
+These are fundamentally different. These take (a lot) more energy to run, but will be significantly more effective where this extra layer is required.
+
+### The broader IP blocking tools (firewalls), e.g. Cloudflare, Wordfence, or similar
+Totally different approaches. These generally monitor changing IP addresses, but usually require a database or IP lookup - so are less efficient by nature. You can definitely use both - these rules processed higher up in the chain, on the server, as well as focusing on more than "just" security. The security rules, too, however, will avoid the database even needing to kick in to check something that also breaks another rule.
+
+## DISCLAIMER
+The entire repo, all files, and all information within are shared with no guarantees. The robots.txt and .htaccess block lists are open source, free to use and modify (though please share your smart ideas!), no need to credit. But here's the caveat: Anything in .htaccess or even robots.txt can break your site. Even if it looks fine to you, a subtle mistake may still end up breaking key functionality or stopping some legit users from accessing your content. Use is entirely at your own risk. You MUST test thoroughly prior to and during deployment. I am not responsible for any breakage, downtime, or weird side effects.
