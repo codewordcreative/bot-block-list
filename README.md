@@ -7,9 +7,9 @@ If anyone would like to contribute - be it corrections, additions, or any other 
 ## Key principles
 
 ### Why block? What to block?
-All crawled content has an immediate impact: data transfer.
+All crawled content has an immediate impact: data transfer. But there's often a lot more impact even beyond that. 
 
-#### Crawlers I'd never add
+#### Crawlers (user agents, in this context) I'd never block
   - Legitimate search engines (Google, Bing, Yandex, DuckDuckGo, etc...)
   - Any crawler that is unlikely to act without user initiation
   - Security-related tools ensuring websites are safe to visit
