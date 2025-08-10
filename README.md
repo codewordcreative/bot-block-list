@@ -48,7 +48,7 @@ Assuming you are on an Apache server (e.g., WordPress and many other setups will
 ## Good sources used to create and update this
 First off, I used my own server logs and a special script to track user agents. This is how I found the suspicious, outdated user agents and many of the bots listed. After I'd been using that for a while, enhancing it with various useful sources, I discovered 8G Firewall. That team - Perishable Press - has been doing very similar things in a very similar way, but with some additional general rules thrown in, so...
 
-### Special mention: Perisahable Press and 8G Firewall
+### Special mention: Perishable Press and 8G Firewall
 I integrated some of the ideas and a couple of agents I had missed, but larger or more commonly hit sites may want to integrate more. Just check it out:
 [Perishable Press Ultimate Block list](https://perishablepress.com/ultimate-ai-block-list/)
 * Please note: The suggested robots.txt may not process properly, and is, to be honest, pointless, because most bots on it will ignore robots.txt. 
