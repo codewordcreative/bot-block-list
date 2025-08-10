@@ -16,6 +16,9 @@ All crawled content has an immediate impact: data transfer.
   - Any platform looking for Open Graph or similar information when a link is shared on their platform
   - Other legitimate purposes, e.g. tools ensuring proper website function
 
+#### Example bots that others may flag which I allow
+  - qualifiedbot is not blocked, as it is designed to only ever be used with the webmaster's consent - it is a paid-for service.
+
 #### Data collection and processing  
 Automated data collection at scale is sometimes helpful, but often not.
   - Where data is stored and referenced, such as that has an additional impact each time it is referenced.
@@ -43,6 +46,7 @@ Assuming you are on an Apache server (e.g., WordPress and many other setups will
 
 ## What about Robots.txt?
 A small number of AI agencies will observe robots.txt, but many don't. Robots.txt is still necessary as it is the only way to block Google's AI training without touching your ability to rank in Google Search or AI summaries (yep, appearing in Google's AI summaries doesn't require you to let yourself get scraped to train Gemini).
+
 
 ## Differences to Cloudflare
 ### The block list
