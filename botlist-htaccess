@@ -6,6 +6,8 @@
 # It's case insensitive. I just normalised an earlier version once upon a time.
 # If you believe something is too broad or doesn't belong on the list, please submit an issue with your reasoning and I'll check it out. Note that any user agent that ignores robots.txt will not be removed.
 
+
+# BEGIN CODEWORDCREATIVE BOT BLOCK https://github.com/codewordcreative/bot-block-list - this won't link to this, it just makes this easier to maintain.
 <IfModule mod_rewrite.c>
    RewriteEngine On
     
@@ -56,3 +58,4 @@
    RewriteRule ^.*$ - [F,L]
 
 </IfModule>
+# END CODEWORD CREATIVE BOT BLOCK
