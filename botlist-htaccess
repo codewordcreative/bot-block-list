@@ -10,6 +10,10 @@
 # BEGIN CODEWORDCREATIVE BOT BLOCK https://github.com/codewordcreative/bot-block-list - this won't link to this, it just makes this easier to maintain.
 <IfModule mod_rewrite.c>
    RewriteEngine On
+
+   # Force HTTPS - uncomment the below if you want to integrate the standard http > https redirect into this block. Unrelated to these rules, but perhaps helpful to show where to put it.
+   # RewriteCond %{HTTPS} !=on
+   # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     
    # Allow all user agents to access robots.txt. Where they are on both lists, it may stop them from trying again if they obey it.
    RewriteCond %{REQUEST_URI} ^/robots\.txt$ [NC]
