@@ -9,6 +9,9 @@ If anyone would like to contribute - be it corrections, additions, or any other 
 ### Why block? What to block?
 All crawled content has an immediate impact: data transfer. But there's often a lot more impact even beyond that. 
 
+### Controversial choice: archive.org
+I currently have this user agent blocked - but consider taking it out. The reason is that Reddit (an unreliable source) says they found LLMs are training from the Wayback Machine's archives. 
+
 #### Crawlers (user agents, in this context) I'd never block
   - Legitimate search engines (Google, Bing, Yandex, DuckDuckGo, etc...)
   - Any crawler that is unlikely to act without user initiation
