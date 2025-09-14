@@ -12,6 +12,10 @@
    RewriteCond %{REQUEST_URI} ^/robots\.txt$ [NC]
    RewriteRule .* - [L]
 
+   #Allow list for bots that may otherwise fail
+   RewriteCond %{HTTP_USER_AGENT} "(facebookexternalhit|Facebot|WhatsApp|Twitterbot|LinkedInBot|Slackbot|Discordbot|TeamsBot|Outlook|Applebot|TelegramBot|Pinterestbot|Redditbot)" [NC]
+RewriteRule ^ - [L]
+
    # Block SEO tools you don't use.
    RewriteCond %{HTTP_USER_AGENT} (Ahrefs|Barkrowler|BLEXBot|Cocolyzebot|DataForSeoBot|DomainStatsBot|dotbot|hypestat|Keyword\ Density/0\.9|linkdexbot|MegaIndex|MJ12bot|online-webceo-bot|Openfind|Nutch|Rogerbot|Semrush|SenutoBot|SEOkicks|SEOlizer|serpstatpot|scrapy|SiteCheckerBot|SISTRIX|SnapPreviewBot|Sogou|spbot|Zeus|ZoomBot) [NC]
    RewriteRule ^ - [F,L]
