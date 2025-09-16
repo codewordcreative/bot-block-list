@@ -8,7 +8,7 @@
   # RewriteCond %{HTTPS} !=on
   # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     
-    # Allow all user agents to access robots.txt. Where they are on both lists, it may stop them from trying again if they obey it. Note: Don't use this if using WordPress or any CMS or plugin that dynamically generates robots.txt.
+    # Allow all user agents to access robots.txt. Where they are on both lists, it may stop them from trying again if they obey it. Note: Don't use this if using WordPress or any CMS or plugin that dynamically generates robots.txt. Alternatively, you can use this to take control over robots.txt - just remember to add one manually.
    # RewriteCond %{REQUEST_URI} ^/robots\.txt$ [NC]
    # RewriteRule .* - [L]
 
