@@ -8,9 +8,9 @@
   # RewriteCond %{HTTPS} !=on
   # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     
-   # Allow all user agents to access robots.txt
-   RewriteCond %{REQUEST_URI} ^/robots\.txt$ [NC]
-   RewriteRule .* - [L]
+    # Allow all user agents to access robots.txt. Where they are on both lists, it may stop them from trying again if they obey it. Note: Don't use this if using WordPress or any CMS or plugin that dynamically generates robots.txt.
+   # RewriteCond %{REQUEST_URI} ^/robots\.txt$ [NC]
+   # RewriteRule .* - [L]
 
    #Allow list for bots that may otherwise fail
    RewriteCond %{HTTP_USER_AGENT} "(facebookexternalhit|Facebot|WhatsApp|Twitterbot|LinkedInBot|Slackbot|Discordbot|TeamsBot|Outlook|Applebot|TelegramBot|Pinterestbot|Redditbot)" [NC]
