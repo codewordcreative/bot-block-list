@@ -14,7 +14,7 @@ I currently have this user agent blocked - but consider taking it out. The reaso
 
 #### Crawlers (user agents, in this context) I'd never block
   - Legitimate search engines (Google, Bing, Yandex, DuckDuckGo, etc...)
-  - Any crawler that is unlikely to act without user initiation
+  - Any crawler that is unlikely to act without the data owner's initiation
   - Security-related tools ensuring websites are safe to visit
   - Any platform looking for Open Graph or similar information when a link is shared on their platform
   - Other legitimate purposes, e.g. tools ensuring proper website function
